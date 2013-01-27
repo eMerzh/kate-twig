@@ -4,7 +4,7 @@
 	<!ENTITY name    "[A-Za-z_:][\w.:_-]*">
 	<!ENTITY entref  "&amp;(#[0-9]+|#[xX][0-9A-Fa-f]+|&name;);">
 ]>
-<language name="Twig HTML Template" version="0.1" kateversion="2.4" section="Markup" extensions="*.twig" mimetype="text/html"  author="Matthew Marshall (matthew@matthewmarshall.org)" license="LGPL" priority="9">
+<language name="Twig HTML Template" version="0.1" kateversion="2.4" section="Markup" extensions="*.twig" mimetype="text/html"  author="Brice Maron (brice _At_ bmaron.net) ; Matthew Marshall (matthew@matthewmarshall.org)" license="LGPL" priority="9">
 
 <!--
     Based off of the katepart html syntax highlighting by Wilbert Berendsen.
@@ -63,7 +63,7 @@
   </context>
 
   <context name="In Block" attribute="Normal Text" lineEndContext="#stay">
-    <RegExpr context="#pop" String="\{%\s*end[a-z]+\s*%\}" lookAhead="true" />
+    <RegExpr context="#pop" String="\{%-*\s*end[a-z]+\s*-*%\}" lookAhead="true" />
     <IncludeRules context="FindTemplate" />
     <IncludeRules context="FindHTML" />
   </context>
@@ -96,7 +96,7 @@
   </context>
 
   <context name="Template Tag" attribute="Template Tag" lineEndContext="#stay">
-      <keyword String="blocktags" context="Found Block Tag" lookAhead="true" attribute="Template Tag" />
+      <keyword String="blocktags" context="Found Block Tag" lookAhead="true" attribute="Template Tag" beginRegion="In Block" />
       <DetectIdentifier attribute="Template Tag" context="In Template Tag" />
   </context>
 
@@ -106,8 +106,8 @@
   </context>
 
   <context name="In Block Tag" attribute="Template Tag Argument" dynamic="true" lineEndContext="#stay" >
-    <RegExpr context="#pop#pop#pop" String="\{%\s*end%1\s*%\}" dynamic="true" attribute="Template Tag"/>
-    <RegExpr context="Non Matching Tag" String="\{%\s*end[a-z]+\s*%\}" lookAhead="true" />
+    <RegExpr context="#pop#pop#pop" String="\{%-*\s*end%1\s*-*%\}" dynamic="true" attribute="Template Tag" endRegion="In Block"/>
+    <RegExpr context="Non Matching Tag" String="\{%-*\s*end[a-z]+\s*-*%\}" lookAhead="true" />
     <Detect2Chars attribute="Template Tag" context="In Block" char="%" char1="}" />
     <IncludeRules context="In Template Tag" />
   </context>
@@ -330,11 +330,11 @@
   <itemData name="PEntityRef" defStyleNum="dsDecVal" />
   <itemData name="Error" defStyleNum="dsError" />
   <itemData name="Template Var" defStyleNum="dsFunction" />
-  <itemData name="Template Tag" defStyleNum="dsFunction" />
+  <itemData name="Template Tag" defStyleNum="dsOthers" bold="1" />
   <itemData name="Template Tag Argument" defStyleNum="dsFunction" />
   <itemData name="Template String" defStyleNum="dsString" />
   <itemData name="Template Comment" defStyleNum="dsComment" />
-  <itemData name="Template Filter" defStyleNum="dsOthers" />
+  <itemData name="Template Filter" defStyleNum="dsFunction" />
   <itemData name="Mismatched Block Tag" defStyleNum="dsError" />
 </itemDatas>
 
