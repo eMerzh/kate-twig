@@ -13,29 +13,46 @@
 -->
 
 <highlighting>
-
 <list name="blocktags">
-    <item>for</item>
-    <item>block</item>
-    <item>if</item>
-    <item>ifequal</item>
-    <item>ifnotequal</item>
-    <item>ifchanged</item>
-    <item>blocktrans</item>
-    <item>spaceless</item>
     <item>autoescape</item>
+    <item>block</item>
+    <item>do</item>
+    <item>embed</item>
+    <item>extends</item>
+    <item>filter</item>
+    <item>flush</item>
+    <item>for</item>
+    <item>from</item>
+    <item>if</item>
+    <item>import</item>
+    <item>include</item>
+    <item>macro</item>
+    <item>sandbox</item>
+    <item>set</item>
+    <item>spaceless</item>
+    <item>use</item>
+    <item>verbatim</item>
 </list>
 
 <list name="endblocktags">
-    <item>endfor</item>
-    <item>endblock</item>
-    <item>endif</item>
-    <item>endifequal</item>
-    <item>endifnotequal</item>
-    <item>endifchanged</item>
-    <item>endblocktrans</item>
-    <item>endspaceless</item>
     <item>endautoescape</item>
+    <item>endblock</item>
+    <item>enddo</item>
+    <item>endembed</item>
+    <item>endextends</item>
+    <item>endfilter</item>
+    <item>endflush</item>
+    <item>endfor</item>
+    <item>endfrom</item>
+    <item>endif</item>
+    <item>endimport</item>
+    <item>endinclude</item>
+    <item>endmacro</item>
+    <item>endsandbox</item>
+    <item>endset</item>
+    <item>endspaceless</item>
+    <item>enduse</item>
+    <item>endverbatim</item>
 </list>
 
 <contexts>
