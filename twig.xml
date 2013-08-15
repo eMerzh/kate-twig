@@ -4,7 +4,7 @@
 	<!ENTITY name    "[A-Za-z_:][\w.:_-]*">
 	<!ENTITY entref  "&amp;(#[0-9]+|#[xX][0-9A-Fa-f]+|&name;);">
 ]>
-<language name="Twig HTML Template" version="0.1" kateversion="2.4" section="Markup" extensions="*.twig" mimetype="text/html"  author="Brice Maron (brice _At_ bmaron.net) ; Matthew Marshall (matthew@matthewmarshall.org)" license="LGPL" priority="9">
+<language name="Twig HTML Template" version="0.1" kateversion="2.4" section="Markup" extensions="*.twig" mimetype="text/html,text/plain"  author="Brice Maron (brice _At_ bmaron.net) ; Matthew Marshall (matthew@matthewmarshall.org)" license="LGPL" priority="9">
 
 <!--
     Based off of the katepart html syntax highlighting by Wilbert Berendsen.
