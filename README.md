@@ -1,16 +1,16 @@
 kate-twig
 =========
 
-A kate / katepart syntax highlighting for Twig
+kate / katepart syntax highlighting for Twig
 
-The twig highlighting file was shamefully based on the django tpl syntax file.
+The Twig highlighting file was shamefully copied from the Django tpl syntax file.
 
 Installation
-==========
+============
 
 Just copy the file to your katepart directory.
-Usualy : 
+Usually: 
 
-cp ./twig.xml ~/.kde4/share/apps/katepart/syntax/
+    cp ./twig.xml ~/.kde4/share/apps/katepart/syntax/
 
-
+The syntax directory may need to be created first.
