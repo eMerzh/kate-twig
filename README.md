@@ -9,8 +9,12 @@ Installation
 ============
 
 Just copy the file to your katepart directory.
-Usually: 
+Usually:
 
     cp ./twig.xml ~/.kde4/share/apps/katepart/syntax/
+
+    or
+
+    /home/USER/.local/share/katepart5/syntax/
 
 The syntax directory may need to be created first.
